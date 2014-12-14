@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sunshine.satyananda.sunshine" >
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.sunshine.satyananda.sunshine.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+package="com.sunshine.satyananda.sunshine" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+<uses-permission android:name="android.permission.INTERNET" />
+
+<application
+    android:allowBackup="true"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/app_name"
+    android:theme="@style/AppTheme" >
+    <activity
+        android:name="com.sunshine.satyananda.sunshine.MainActivity"
+        android:label="@string/app_name" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.sunshine.satyananda.sunshine.DetailActivity"
+        android:label="@string/title_activity_detail"
+        android:parentActivityName="com.sunshine.satyananda.sunshine.MainActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.sunshine.satyananda.sunshine.MainActivity" />
+    </activity>
+    <activity
+        android:name="com.sunshine.satyananda.sunshine.SettingsActivity"
+        android:label="@string/title_activity_settings"
+        android:parentActivityName="com.sunshine.satyananda.sunshine.MainActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.sunshine.satyananda.sunshine.MainActivity" />
+    </activity>
+</application>
 
 </manifest>
